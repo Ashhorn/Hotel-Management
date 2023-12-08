@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.buttonRate = new Guna.UI2.WinForms.Guna2Button();
             this.buttonRoom = new Guna.UI2.WinForms.Guna2Button();
             this.buttonGuest = new Guna.UI2.WinForms.Guna2Button();
             this.buttonFrontdesk = new Guna.UI2.WinForms.Guna2Button();
@@ -43,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mainformpanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -53,7 +51,6 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -74,26 +71,6 @@
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // buttonRate
-            // 
-            this.buttonRate.BackColor = System.Drawing.Color.Transparent;
-            this.buttonRate.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.buttonRate.CheckedState.FillColor = System.Drawing.Color.Gray;
-            this.buttonRate.CheckedState.ForeColor = System.Drawing.Color.Black;
-            this.buttonRate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonRate.FillColor = System.Drawing.Color.White;
-            this.buttonRate.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.buttonRate.ForeColor = System.Drawing.Color.Black;
-            this.buttonRate.Location = new System.Drawing.Point(48, 347);
-            this.buttonRate.Name = "buttonRate";
-            this.buttonRate.Size = new System.Drawing.Size(76, 25);
-            this.buttonRate.TabIndex = 23;
-            this.buttonRate.Text = "Rates";
-            this.buttonRate.Click += new System.EventHandler(this.buttonRate_Click);
             // 
             // buttonRoom
             // 
@@ -130,9 +107,9 @@
             this.buttonGuest.ForeColor = System.Drawing.Color.Black;
             this.buttonGuest.Location = new System.Drawing.Point(48, 250);
             this.buttonGuest.Name = "buttonGuest";
-            this.buttonGuest.Size = new System.Drawing.Size(86, 25);
+            this.buttonGuest.Size = new System.Drawing.Size(130, 25);
             this.buttonGuest.TabIndex = 21;
-            this.buttonGuest.Text = "Guests";
+            this.buttonGuest.Text = "Reservation";
             this.buttonGuest.Click += new System.EventHandler(this.buttonGuest_Click);
             // 
             // buttonFrontdesk
@@ -248,17 +225,6 @@
             this.mainformpanel.Size = new System.Drawing.Size(1156, 603);
             this.mainformpanel.TabIndex = 35;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox7.Image = global::Hotel_Management.Properties.Resources._4;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 342);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 18;
-            this.pictureBox7.TabStop = false;
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -348,7 +314,7 @@
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(101, 116);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(105, 116);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 38;
             this.guna2PictureBox3.TabStop = false;
@@ -375,7 +341,6 @@
             this.ClientSize = new System.Drawing.Size(1366, 720);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.buttonRate);
             this.Controls.Add(this.labelDateTime);
             this.Controls.Add(this.buttonRoom);
             this.Controls.Add(this.label6);
@@ -385,7 +350,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dashboardbutton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -398,7 +362,6 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -422,12 +385,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button buttonRate;
         private Guna.UI2.WinForms.Guna2Button buttonRoom;
         private Guna.UI2.WinForms.Guna2Button buttonGuest;
         private Guna.UI2.WinForms.Guna2Button buttonFrontdesk;
         private Guna.UI2.WinForms.Guna2Button dashboardbutton;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;

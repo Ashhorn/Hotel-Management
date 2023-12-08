@@ -111,11 +111,11 @@
     <Compile Include="UC\frontdeskUC.Designer.cs">
       <DependentUpon>frontdeskUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\GuestUC.cs">
+    <Compile Include="UC\ReservationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\GuestUC.Designer.cs">
-      <DependentUpon>GuestUC.cs</DependentUpon>
+    <Compile Include="UC\ReservationUC.Designer.cs">
+      <DependentUpon>ReservationUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\RateUC.cs">
       <SubType>UserControl</SubType>
@@ -169,8 +169,8 @@
     <EmbeddedResource Include="UC\frontdeskUC.resx">
       <DependentUpon>frontdeskUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\GuestUC.resx">
-      <DependentUpon>GuestUC.cs</DependentUpon>
+    <EmbeddedResource Include="UC\ReservationUC.resx">
+      <DependentUpon>ReservationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\RateUC.resx">
       <DependentUpon>RateUC.cs</DependentUpon>

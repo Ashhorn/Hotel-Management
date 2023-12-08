@@ -36,6 +36,12 @@ namespace Hotel_Management
     partial void InsertUserTable(UserTable instance);
     partial void UpdateUserTable(UserTable instance);
     partial void DeleteUserTable(UserTable instance);
+    partial void InsertClientsTable(ClientsTable instance);
+    partial void UpdateClientsTable(ClientsTable instance);
+    partial void DeleteClientsTable(ClientsTable instance);
+    partial void InsertReservationTable(ReservationTable instance);
+    partial void UpdateReservationTable(ReservationTable instance);
+    partial void DeleteReservationTable(ReservationTable instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -81,6 +87,22 @@ namespace Hotel_Management
 			get
 			{
 				return this.GetTable<UserTable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ClientsTable> ClientsTables
+		{
+			get
+			{
+				return this.GetTable<ClientsTable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ReservationTable> ReservationTables
+		{
+			get
+			{
+				return this.GetTable<ReservationTable>();
 			}
 		}
 	}
@@ -400,6 +422,346 @@ namespace Hotel_Management
 					this._Last_Name = value;
 					this.SendPropertyChanged("Last_Name");
 					this.OnLast_NameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ClientsTable")]
+	public partial class ClientsTable : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Client_ID;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private int _PhoneNumber;
+		
+		private string _Address;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnClient_IDChanging(int value);
+    partial void OnClient_IDChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnPhoneNumberChanging(int value);
+    partial void OnPhoneNumberChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    #endregion
+		
+		public ClientsTable()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Client_ID
+		{
+			get
+			{
+				return this._Client_ID;
+			}
+			set
+			{
+				if ((this._Client_ID != value))
+				{
+					this.OnClient_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Client_ID = value;
+					this.SendPropertyChanged("Client_ID");
+					this.OnClient_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(150) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="Int NOT NULL")]
+		public int PhoneNumber
+		{
+			get
+			{
+				return this._PhoneNumber;
+			}
+			set
+			{
+				if ((this._PhoneNumber != value))
+				{
+					this.OnPhoneNumberChanging(value);
+					this.SendPropertyChanging();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ReservationTable")]
+	public partial class ReservationTable : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Reservation_ID;
+		
+		private string _Reservation_Room_Type;
+		
+		private int _Reservation_Room_Number;
+		
+		private int _Reservation_Client_ID;
+		
+		private string _Reservation_In;
+		
+		private string _Reservation_Out;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnReservation_IDChanging(int value);
+    partial void OnReservation_IDChanged();
+    partial void OnReservation_Room_TypeChanging(string value);
+    partial void OnReservation_Room_TypeChanged();
+    partial void OnReservation_Room_NumberChanging(int value);
+    partial void OnReservation_Room_NumberChanged();
+    partial void OnReservation_Client_IDChanging(int value);
+    partial void OnReservation_Client_IDChanged();
+    partial void OnReservation_InChanging(string value);
+    partial void OnReservation_InChanged();
+    partial void OnReservation_OutChanging(string value);
+    partial void OnReservation_OutChanged();
+    #endregion
+		
+		public ReservationTable()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Reservation_ID
+		{
+			get
+			{
+				return this._Reservation_ID;
+			}
+			set
+			{
+				if ((this._Reservation_ID != value))
+				{
+					this.OnReservation_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_ID = value;
+					this.SendPropertyChanged("Reservation_ID");
+					this.OnReservation_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_Room_Type", DbType="VarChar(6) NOT NULL", CanBeNull=false)]
+		public string Reservation_Room_Type
+		{
+			get
+			{
+				return this._Reservation_Room_Type;
+			}
+			set
+			{
+				if ((this._Reservation_Room_Type != value))
+				{
+					this.OnReservation_Room_TypeChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_Room_Type = value;
+					this.SendPropertyChanged("Reservation_Room_Type");
+					this.OnReservation_Room_TypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_Room_Number", DbType="Int NOT NULL")]
+		public int Reservation_Room_Number
+		{
+			get
+			{
+				return this._Reservation_Room_Number;
+			}
+			set
+			{
+				if ((this._Reservation_Room_Number != value))
+				{
+					this.OnReservation_Room_NumberChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_Room_Number = value;
+					this.SendPropertyChanged("Reservation_Room_Number");
+					this.OnReservation_Room_NumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_Client_ID", DbType="Int NOT NULL")]
+		public int Reservation_Client_ID
+		{
+			get
+			{
+				return this._Reservation_Client_ID;
+			}
+			set
+			{
+				if ((this._Reservation_Client_ID != value))
+				{
+					this.OnReservation_Client_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_Client_ID = value;
+					this.SendPropertyChanged("Reservation_Client_ID");
+					this.OnReservation_Client_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_In", DbType="VarChar(32) NOT NULL", CanBeNull=false)]
+		public string Reservation_In
+		{
+			get
+			{
+				return this._Reservation_In;
+			}
+			set
+			{
+				if ((this._Reservation_In != value))
+				{
+					this.OnReservation_InChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_In = value;
+					this.SendPropertyChanged("Reservation_In");
+					this.OnReservation_InChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Reservation_Out", DbType="VarChar(32) NOT NULL", CanBeNull=false)]
+		public string Reservation_Out
+		{
+			get
+			{
+				return this._Reservation_Out;
+			}
+			set
+			{
+				if ((this._Reservation_Out != value))
+				{
+					this.OnReservation_OutChanging(value);
+					this.SendPropertyChanging();
+					this._Reservation_Out = value;
+					this.SendPropertyChanged("Reservation_Out");
+					this.OnReservation_OutChanged();
 				}
 			}
 		}

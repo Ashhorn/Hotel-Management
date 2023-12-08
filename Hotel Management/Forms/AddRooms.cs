@@ -21,6 +21,7 @@ namespace Hotel_Management.Forms
 
         private void confirmedbtn_Click(object sender, EventArgs e)
         {
+            bool isFree = radioButtonYes.Checked;
             string prodid = (txtroomnumber.Text);
             var stexist = from s in db.rooms where s.roomNo == prodid select s.roomNo;
             if(stexist.Count()> 0)
@@ -34,6 +35,7 @@ namespace Hotel_Management.Forms
                 rooma.roomType = txtroomtype.Text;
                 rooma.bed = txtbed.Text;
                 rooma.price = Int64.Parse(txtprice.Text);
+                rooma.booked = isFree ? "Yes" : "No";
                 db.rooms.InsertOnSubmit(rooma);
                 db.SubmitChanges();
                 MessageBox.Show("Data Inserted Successfully");
@@ -46,6 +48,11 @@ namespace Hotel_Management.Forms
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonNo_CheckedChanged(object sender, EventArgs e)
         {
 
         }

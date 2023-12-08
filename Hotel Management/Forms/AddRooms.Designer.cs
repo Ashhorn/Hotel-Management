@@ -41,13 +41,16 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonYes = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Price
             // 
             this.Price.AutoSize = true;
             this.Price.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price.Location = new System.Drawing.Point(86, 306);
+            this.Price.Location = new System.Drawing.Point(84, 267);
             this.Price.Name = "Price";
             this.Price.Size = new System.Drawing.Size(47, 21);
             this.Price.TabIndex = 19;
@@ -57,7 +60,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 230);
+            this.label3.Location = new System.Drawing.Point(84, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 21);
             this.label3.TabIndex = 18;
@@ -67,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 157);
+            this.label2.Location = new System.Drawing.Point(84, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 17;
@@ -77,7 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(86, 76);
+            this.label1.Location = new System.Drawing.Point(84, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 21);
             this.label1.TabIndex = 16;
@@ -98,7 +101,7 @@
             "Double",
             "Triple",
             "VIP"});
-            this.txtbed.Location = new System.Drawing.Point(90, 254);
+            this.txtbed.Location = new System.Drawing.Point(88, 215);
             this.txtbed.Name = "txtbed";
             this.txtbed.Size = new System.Drawing.Size(281, 36);
             this.txtbed.TabIndex = 15;
@@ -117,7 +120,7 @@
             "AC",
             "Non-AC",
             "Donkey Kong"});
-            this.txtroomtype.Location = new System.Drawing.Point(90, 181);
+            this.txtroomtype.Location = new System.Drawing.Point(88, 142);
             this.txtroomtype.Name = "txtroomtype";
             this.txtroomtype.Size = new System.Drawing.Size(281, 36);
             this.txtroomtype.TabIndex = 14;
@@ -133,7 +136,7 @@
             this.txtprice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtprice.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtprice.Location = new System.Drawing.Point(90, 330);
+            this.txtprice.Location = new System.Drawing.Point(88, 291);
             this.txtprice.Name = "txtprice";
             this.txtprice.PasswordChar = '\0';
             this.txtprice.PlaceholderText = "";
@@ -152,7 +155,7 @@
             this.txtroomnumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtroomnumber.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtroomnumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtroomnumber.Location = new System.Drawing.Point(90, 100);
+            this.txtroomnumber.Location = new System.Drawing.Point(88, 61);
             this.txtroomnumber.Name = "txtroomnumber";
             this.txtroomnumber.PasswordChar = '\0';
             this.txtroomnumber.PlaceholderText = "";
@@ -197,11 +200,47 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 46);
             this.guna2ControlBox1.TabIndex = 60;
             // 
+            // radioButtonNo
+            // 
+            this.radioButtonNo.AutoSize = true;
+            this.radioButtonNo.Location = new System.Drawing.Point(154, 363);
+            this.radioButtonNo.Name = "radioButtonNo";
+            this.radioButtonNo.Size = new System.Drawing.Size(39, 17);
+            this.radioButtonNo.TabIndex = 62;
+            this.radioButtonNo.TabStop = true;
+            this.radioButtonNo.Text = "No";
+            this.radioButtonNo.UseVisualStyleBackColor = true;
+            this.radioButtonNo.CheckedChanged += new System.EventHandler(this.radioButtonNo_CheckedChanged);
+            // 
+            // radioButtonYes
+            // 
+            this.radioButtonYes.AutoSize = true;
+            this.radioButtonYes.Location = new System.Drawing.Point(154, 336);
+            this.radioButtonYes.Name = "radioButtonYes";
+            this.radioButtonYes.Size = new System.Drawing.Size(43, 17);
+            this.radioButtonYes.TabIndex = 61;
+            this.radioButtonYes.TabStop = true;
+            this.radioButtonYes.Text = "Yes";
+            this.radioButtonYes.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(85, 349);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 16);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Booked:";
+            // 
             // AddRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 510);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.radioButtonNo);
+            this.Controls.Add(this.radioButtonYes);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.Price);
             this.Controls.Add(this.label3);
@@ -234,5 +273,8 @@
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radioButtonNo;
+        private System.Windows.Forms.RadioButton radioButtonYes;
     }
 }

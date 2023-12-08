@@ -15,7 +15,6 @@ namespace Hotel_Management
     public partial class MainForm : Form
     {
         public RoomUC RoomUC { get; set; }
-        private string Username;
         public MainForm()
         {
             InitializeComponent();
@@ -70,12 +69,12 @@ namespace Hotel_Management
 
         private void buttonGuest_Click(object sender, EventArgs e)
         {
-            GuestUC guest = new GuestUC();
-            if (!mainformpanel.Contains(guest))
+            ReservationUC reservation = new ReservationUC();
+            if (!mainformpanel.Contains(reservation))
             {
-                mainformpanel.Controls.Add(guest);
+                mainformpanel.Controls.Add(reservation);
             }
-            guest.BringToFront();
+            reservation.BringToFront();
         }
 
         private void buttonFrontdesk_Click(object sender, EventArgs e)

@@ -33,5 +33,10 @@ namespace Hotel_Management.UC
            var roomdetails = (from x in db.rooms select x).ToList();
             GridView1.DataSource = roomdetails;
         }
+
+        private void GridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
