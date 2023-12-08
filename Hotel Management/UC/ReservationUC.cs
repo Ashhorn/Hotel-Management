@@ -102,8 +102,9 @@ namespace Hotel_Management.UC
         {
             using (DataClasses1DataContext dbRooms = new DataClasses1DataContext())
             {
+                
                 // Retrieve the RoomsTable record for the specified roomNumber
-                room roomToUpdate = dbRooms.rooms.SingleOrDefault(room => room.roomid == roomNumber);
+                room roomToUpdate = dbRooms.rooms.SingleOrDefault(room => room.roomNo == roomNumber.ToString());
 
                 if (roomToUpdate != null)
                 {
@@ -118,6 +119,7 @@ namespace Hotel_Management.UC
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
+            DataClasses1DataContext dbrooms = new DataClasses1DataContext();
             string roomType = comboBoxRoomType.Text;
             int roomNumber = Convert.ToInt32(comboBoxRoomNo.Text);
             int clientID = Convert.ToInt32(textBoxClientId.Text);
